@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity ,StatusBar,TextInput, Image, Platform} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity ,TextInput, Image, Platform} from 'react-native';
 /*--导入外部的组件类--*/
 import HomeDetail from "./XMCHomeDetail";
 
@@ -33,8 +33,6 @@ export default class Home extends Component<Props> {
   renderNavBar() {
     return (
       <View style={styles.navBarStyle}>
-        <StatusBar  backgroundColor="rgba(255,96,0,1.0)"
-                    barStyle="light-content" />
         {/*左边*/}
         <TouchableOpacity
           onPress={() => this.pushToDetail()}

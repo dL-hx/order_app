@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, Image, Platform} from 'react-native';
+import {StyleSheet, Text, View, Image, Platform} from 'react-native';
 import {Navigator} from 'react-native-deprecated-custom-components';
 
 /*------导入外部的组件类------*/
 import TabNavigator from 'react-native-tab-navigator';
-import Home from './../Home/XMCHome'
-import Shop from './../Shop/XMCShop'
-import Mine from './../Mine/XMCMine'
-import More from '../More/XMCMore'
+import Home from './../Home/XMCHome';
+import Shop from './../Shop/XMCShop';
+import Mine from './../Mine/XMCMine';
+import More from '../More/XMCMore';
+
 export default class Main extends Component<Props> {
 
   // 初始化函数(变量是可以改变的,充当状态机的角色)
@@ -20,103 +21,53 @@ export default class Main extends Component<Props> {
 
   render() {
     return (
-        <TabNavigator>
-          {/*--首页--*/}
-          <TabNavigator.Item
-            title="首页"
-            renderIcon={() => <Image source={require('./../../image/home.png')} style={styles.iconStyle} />} // 图标
-            renderSelectedIcon={() => <Image source={require('./../../image/home_selected.png')} style={styles.iconStyle} />} // 选中图标
-            selected={this.state.selectedTab === 'home'}
-            onPress={() => this.setState({ selectedTab: 'home' })}
-          >
-            <Navigator
-              initialRoute={{
-                name:'首页',
-                component:Home
-              }}
-              configureScene = {()=>{
-                return Navigator.SceneConfigs.PushFromRight;
-              }}
-              renderScene={(route, navigator) => {  // 渲染的屏幕, 从子组件接受参数
-                let Component = route.component; // 从路由中取出组件
-                return <Component navigator={navigator} {...route.passProps}/>; // 返回组件
-              }}
-            />
-          </TabNavigator.Item>
-          {/*--商家--*/}
-          <TabNavigator.Item
-            title="商家"
-            renderIcon={() => <Image source={require('./../../image/shop.png')} style={styles.iconStyle} />} // 图标
-            renderSelectedIcon={() => <Image source={require('./../../image/shop_selected.png')} style={styles.iconStyle} />} // 选中图标
-            selected={this.state.selectedTab === 'shop'}
-            onPress={() => this.setState({ selectedTab: 'shop' })}
-          >
-            <Navigator
-              initialRoute={{
-                name:'商家',
-                component:Shop
-              }}
-              configureScene = {()=>{
-                return Navigator.SceneConfigs.PushFromRight;
-              }}
-              renderScene={(route, navigator) => {  // 渲染的屏幕, 从子组件接受参数
-                let Component = route.component; // 从路由中取出组件
-                return <Component navigator={navigator} {...route.passProps}/>; // 返回组件
-              }}
-            />
-          </TabNavigator.Item>
-          {/*--我的--*/}
-          <TabNavigator.Item
-            title="我的"
-            renderIcon={() => <Image source={require('./../../image/mine.png')} style={styles.iconStyle} />} // 图标
-            renderSelectedIcon={() => <Image source={require('./../../image/mine_selected.png')} style={styles.iconStyle} />} // 选中图标
-            selected={this.state.selectedTab === 'mine'}
-            onPress={() => this.setState({ selectedTab: 'mine' })}
-          >
-            <Navigator
-              initialRoute={{
-                name:'我的',
-                component:Mine
-              }}
-              configureScene = {()=>{
-                return Navigator.SceneConfigs.PushFromRight;
-              }}
-              renderScene={(route, navigator) => {  // 渲染的屏幕, 从子组件接受参数
-                let Component = route.component; // 从路由中取出组件
-                return <Component navigator={navigator} {...route.passProps}/>; // 返回组件
-              }}
-            />
-          </TabNavigator.Item>
-          {/*--更多--*/}
-          <TabNavigator.Item
-            title="更多"
-            renderIcon={() => <Image source={require('./../../image/more.png')} style={styles.iconStyle} />} // 图标
-            renderSelectedIcon={() => <Image source={require('./../../image/more_selected.png')} style={styles.iconStyle} />} // 选中图标
-            selected={this.state.selectedTab === 'more'}
-            onPress={() => this.setState({ selectedTab: 'more' })}
-          >
-            <Navigator
-              initialRoute={{
-                name:'更多',
-                component:More
-              }}
-              configureScene = {()=>{
-                return Navigator.SceneConfigs.PushFromRight;
-              }}
-              renderScene={(route, navigator) => {  // 渲染的屏幕, 从子组件接受参数
-                let Component = route.component; // 从路由中取出组件
-                return <Component navigator={navigator} {...route.passProps}/>; // 返回组件
-              }}
-            />
-          </TabNavigator.Item>
-        </TabNavigator>
+      <TabNavigator>
+        {/*--首页--*/}
+        {this.renderTabBarItem('首页', require('./../../image/home.png'), require('./../../image/home_selected.png'), 'home', '首页', Home)}
+        {/*--商家--*/}
+        {this.renderTabBarItem('商家', require('./../../image/shop.png'), require('./../../image/shop_selected.png'), 'shop', '商家', Shop)}
+        {/*--我的--*/}
+        {this.renderTabBarItem('我的', require('./../../image/mine.png'), require('./../../image/mine_selected.png'), 'mine', '我的', Mine)}
+        {/*--更多--*/}
+        {this.renderTabBarItem('更多', require('./../../image/more.png'), require('./../../image/more_selected.png'), 'more', '更多', More)}
+      </TabNavigator>
     );
+  }
+
+  // 每一个TabBarItem
+  renderTabBarItem(title, iconName, selectedIconName, selectedTab, componentName, component,badgeText) {
+    return <TabNavigator.Item
+      title={title} // 传递变量, 一定要加{}
+      renderIcon={() => <Image source={iconName} style={styles.iconStyle}/>} // 图标
+      renderSelectedIcon={() => <Image source={selectedIconName} style={styles.iconStyle}/>} // 选中图标
+      selected={this.state.selectedTab === selectedTab}
+      onPress={() => this.setState({selectedTab: selectedTab})}
+      selectedTitleStyle={styles.selectedTitleStyle}
+      badgeText={badgeText}
+    >
+      <Navigator
+        initialRoute={{
+          name: componentName,
+          component: component
+        }}
+        configureScene={() => {
+          return Navigator.SceneConfigs.PushFromRight;
+        }}
+        renderScene={(route, navigator) => {  // 渲染的屏幕, 从子组件接受参数
+          let Component = route.component; // 从路由中取出组件
+          return <Component navigator={navigator} {...route.passProps}/>; // 返回组件
+        }}
+      />
+    </TabNavigator.Item>;
   }
 }
 
 const styles = StyleSheet.create({
   iconStyle: {
-    width: Platform.OS==='ios'?30:25,
-    height: Platform.OS==='ios'?30:25
+    width: Platform.OS === 'ios' ? 30 : 25,
+    height: Platform.OS === 'ios' ? 30 : 25
   },
+  selectedTitleStyle:{
+    color:'#d81e06'
+  }
 });

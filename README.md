@@ -19,3 +19,5 @@
 ## 8.头部组件轮播图效果
 ![](https://ws1.sinaimg.cn/large/006pJUwqgy1g1t9v40fmyg30da0mtdm5.gif)
 
+## 9.首页中间部分1
+![](https://ws1.sinaimg.cn/large/006pJUwqly1g1td3ujrylj30cy0n5dhd.jpg)

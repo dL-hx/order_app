@@ -3,6 +3,7 @@ import {StyleSheet, Text, View, TouchableOpacity, TextInput, Image, ScrollView, 
 /*--导入外部的组件类--*/
 import HomeDetail from "./XMCHomeDetail";
 import TopView from "./XMCTopView"
+import HomeMiddleView from "./XMCHomeMiddleView"
 
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
@@ -16,6 +17,8 @@ export default class Home extends Component {
         <ScrollView>
         {/* 头部的View*/}
           <TopView/>
+        {/*中间的内容*/}
+          <HomeMiddleView/>
         </ScrollView>
      {/*   <TouchableOpacity
           onPress={() => {

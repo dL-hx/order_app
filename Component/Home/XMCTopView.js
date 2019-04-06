@@ -11,10 +11,10 @@ import {
 var Dimensions = require('Dimensions');
 var {width} = Dimensions.get('window');
 
-// // 引入外部的json数据
+// 引入外部的json数据
 var TopMenu = require('../../LocalData/TopMenu.json');
 //
-// // 引入外部的组件
+// 引入外部的组件
 import TopListView from './XMCTopListView'
 
 export default class TopView extends Component {
@@ -68,6 +68,8 @@ export default class TopView extends Component {
               <TopListView key={i} dataArr={dataArr[i]}/>
             );
         }
+        return itemArr;
+
         // var colorArr = ['red','green'];
         // // 遍历创建组件
         // for(var i=0; i<colorArr.length; i++){
@@ -77,8 +79,8 @@ export default class TopView extends Component {
         //       </View>
         //     );
         // }
-        //        返回组件数组
-        return itemArr;
+        //    返回组件数组
+        //    return itemArr;
     }
 
     // 页码(指示器)

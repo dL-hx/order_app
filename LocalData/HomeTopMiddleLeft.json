@@ -1,9 +1,9 @@
 {
   "dataLeft":[
-    {"img1" : "mdqg", "img2" : "yyms", "title" : "探路组碳烤鱼", "price": "¥9.5", "sale": "再减3元"}
+    {"img1" : "https://ws1.sinaimg.cn/large/006pJUwqgy1g1tcqjtjrcj307602c3ym.jpg", "img2" : "https://ws1.sinaimg.cn/large/006pJUwqgy1g1tbz6nquqj303k02d74j.jpg", "title" : "探路组碳烤鱼", "price": "¥9.5", "sale": "再减3元"}
   ],
   "dataRight":[
-    {"title" : "天天特价", "subTitle" : "特惠不打烊", "rightImage" : "tttj", "titleColor": "orange"},
-    {"title" : "一元吃", "subTitle" : "一元吃美食", "rightImage" : "yyms", "titleColor": "red"}
+    {"title" : "天天特价", "subTitle" : "特惠不打烊", "rightImage" : "https://ws1.sinaimg.cn/large/006pJUwqgy1g1tc4kt4tuj303902dglt.jpg", "titleColor": "orange"},
+    {"title" : "一元吃", "subTitle" : "一元吃美食", "rightImage" : "https://ws1.sinaimg.cn/large/006pJUwqgy1g1tbz6nquqj303k02d74j.jpg", "titleColor": "red"}
   ]
 }

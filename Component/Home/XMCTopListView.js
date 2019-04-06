@@ -18,8 +18,9 @@ var cols = 5;
 var cellW = Platform.OS == 'ios' ? 70: 60;
 var cellH = 70;
 var vMargin = (width - cellW * cols) / (cols + 1);
+
 // 忽略RN中的黄色警告----刷新之后，你的世界就清净了
-console.disableYellowBox = true;
+// console.disableYellowBox = true;
 export default class TopListView extends Component {
 
     static defaultProps() {

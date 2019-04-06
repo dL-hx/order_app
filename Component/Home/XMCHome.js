@@ -5,6 +5,7 @@ import HomeDetail from "./XMCHomeDetail";
 import TopView from "./XMCTopView"
 import HomeMiddleView from "./XMCHomeMiddleView"
 import MiddleBottomView from "./XMCMiddleBottomView"
+import ShopCenter from "./XMCShopCenter"
 
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
@@ -21,8 +22,11 @@ export default class Home extends Component {
           {/*中间的内容*/}
           <HomeMiddleView/>
           {/*中间的下半部分内容*/}
-          <MiddleBottomView/>
-
+          <MiddleBottomView
+            popTopHome={(data)=>{this.pushToDetail(data)}}
+          />
+          {/*购物中心*/}
+          <ShopCenter/>
         </ScrollView>
      {/*   <TouchableOpacity
           onPress={() => {
@@ -62,9 +66,9 @@ export default class Home extends Component {
         {/*右边*/}
         <View style={styles.rightNavViewStyle}>
           <TouchableOpacity
-            onPress={() => {
-              alert('点击了'); // 点击按钮时关闭当前窗口
-            }}
+            // onPress={() => {
+            //   alert('点击了'); // 点击按钮时关闭当前窗口
+            // }}
           >
             <Image source={require('./../../image/bell.png')} style={styles.navRightImgStyle}/>
           </TouchableOpacity>

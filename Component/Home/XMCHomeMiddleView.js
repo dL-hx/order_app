@@ -30,7 +30,7 @@ export default class HomeMiddleView extends Component {
     var data = TopMiddleData.dataLeft[0];
 
     return (
-      <TouchableOpacity onPress={()=>{alert('0')}}>
+      <TouchableOpacity>
         <View style={styles.leftViewStyle}>
           <Image source={{uri: data.img1}} style={styles.leftImageStyle}/>
           <Image source={{uri: data.img2}} style={styles.leftImageStyle}/>

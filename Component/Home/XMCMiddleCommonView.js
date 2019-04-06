@@ -8,16 +8,19 @@ var {width, height} = Dimensions.get('window');
 export default class CommonView extends Component {
   static defaultProps() {
     return {
-      title: '',
-      subTitle:'',
-      rightIcon:'',
-      titleColor:''
+      title:'',
+      subTitle: '',
+      rightIcon: '',
+      titleColor: '',
+      tplurl: '', //下级界面的URL路径
+      // 回调函数
+      callBackClickCell: null
     }
   };
 
   render() {
     return (
-      <TouchableOpacity onPressIn={()=>alert('点击了')}>
+      <TouchableOpacity onPressIn={()=>this.clickCell(this.props.tplurl)}>
         <View style={styles.container}>
           {/*左边*/}
           <View>
@@ -29,6 +32,13 @@ export default class CommonView extends Component {
         </View>
       </TouchableOpacity>
     );
+  }
+  // 点击了cell
+  clickCell(data){
+    // 判断处理
+    if (this.props.callBackClickCell == null) return;
+    // 执行回调函数
+    this.props.callBackClickCell(data);
   }
 }
 

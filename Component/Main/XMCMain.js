@@ -9,7 +9,7 @@ import Shop from './../Shop/XMCShop';
 import Mine from './../Mine/XMCMine';
 import More from '../More/XMCMore';
 
-export default class Main extends Component<Props> {
+export default class Main extends Component {
 
   // 初始化函数(变量是可以改变的,充当状态机的角色)
   constructor(props) {

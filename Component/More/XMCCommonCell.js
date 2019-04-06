@@ -19,9 +19,10 @@ export default class CommonCell extends Component {
   render() {
     return (
       <TouchableOpacity
-        onPress={() => {
-          alert('点了')
-        }}
+        activeOpacity={0.5}
+        // onPress={() => {
+        //   alert('点了')
+        // }}
       >
         <View style={styles.container}>
           {/*左边*/}

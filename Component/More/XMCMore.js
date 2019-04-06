@@ -36,10 +36,10 @@ export default class More extends Component {
   // 导航条
   renderNavBar() {
     return <View style={styles.navOutViewStyle}>
-      <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold'}}>更多</Text>
-      <TouchableOpacity onPress={() => {
-        alert('点了!')
-      }} style={styles.rightViewStyle}>
+      <Text style={{color: 'white', fontSize: 20,  }}>更多</Text>
+      <TouchableOpacity
+       activeOpacity={0.5}
+       style={styles.rightViewStyle}>
         <Image source={require('./../../image/setting.png')} style={styles.navImgStyle}></Image>
       </TouchableOpacity>
     </View>

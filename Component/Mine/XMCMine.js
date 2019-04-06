@@ -1,15 +1,32 @@
 import React, {Component} from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native'
 import MyCell from "./XMCCommonMyCell"
-
+import MiddleView from "./XMCMiddleView"
+import MineHeaderView from './XMCMineHeaderView'
 
 export default class Mine extends Component {
   render() {
     return (
-      <ScrollView style={styles.scrollViewStyle}>
+      <ScrollView
+        style={styles.scrollViewStyle}
+        //内容相对于滚动视图边缘的坐标
+        //吸顶的效果
+        //这两个属性目前只支持ios 对安卓没有效果
+        contentInset = {{top:-200}}
+        contentOffset = {{y:200}}
+      >
        {/*<View style={styles.container}>
               <Text style={styles.welcome}>我的</Text>
             </View>*/}
+        <MineHeaderView />
+        <View style={{marginTop: 20}}>
+          <MyCell
+            leftTitle="我的订单"
+            rightTitle="查看全部订单"
+            leftIcon={require('./../../image/start.png')}
+          />
+          <MiddleView/>
+        </View>
         <View style={{marginTop: 20}}>
           <MyCell
             leftTitle="饭团钱包"

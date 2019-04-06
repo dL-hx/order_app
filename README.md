@@ -12,3 +12,5 @@
 ![](https://ws1.sinaimg.cn/large/006pJUwqly1g1sp09zypgj30f70qzjsb.jpg)
 ## 5.我的页面(cell)
 ![](https://ws1.sinaimg.cn/large/006pJUwqgy1g1st96gx8nj30f50qvdgl.jpg)
+## 6.我的页面
+![](https://ws1.sinaimg.cn/large/006pJUwqly1g1szvfky8ej30f60r2dhd.jpg)

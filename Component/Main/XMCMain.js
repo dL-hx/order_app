@@ -68,6 +68,6 @@ const styles = StyleSheet.create({
     height: Platform.OS === 'ios' ? 30 : 25
   },
   selectedTitleStyle:{
-    color:'#d81e06'
+    color:'#d81e06',
   }
 });

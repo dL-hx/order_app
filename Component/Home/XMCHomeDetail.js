@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Home from "./XMCHome";
 
 
-export default class HomeDetail extends Component<Props> {
+export default class HomeDetail extends Component {
   render() {
     return (
       <View style={styles.container}>

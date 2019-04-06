@@ -4,6 +4,7 @@ import {StyleSheet, Text, View, TouchableOpacity, TextInput, Image, ScrollView, 
 import HomeDetail from "./XMCHomeDetail";
 import TopView from "./XMCTopView"
 import HomeMiddleView from "./XMCHomeMiddleView"
+import MiddleBottomView from "./XMCMiddleBottomView"
 
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
@@ -15,10 +16,13 @@ export default class Home extends Component {
         {this.renderNavBar()}
         {/*首页的主要内容*/}
         <ScrollView>
-        {/* 头部的View*/}
+          {/* 头部的View*/}
           <TopView/>
-        {/*中间的内容*/}
+          {/*中间的内容*/}
           <HomeMiddleView/>
+          {/*中间的下半部分内容*/}
+          <MiddleBottomView/>
+
         </ScrollView>
      {/*   <TouchableOpacity
           onPress={() => {

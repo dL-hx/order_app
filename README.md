@@ -21,3 +21,6 @@
 
 ## 9.首页中间部分1
 ![](https://ws1.sinaimg.cn/large/006pJUwqly1g1td3ujrylj30cy0n5dhd.jpg)
+
+## 10.首页中间部分2
+![](https://ws1.sinaimg.cn/large/006pJUwqgy1g1tezx8qylj30cx0n3tau.jpg)

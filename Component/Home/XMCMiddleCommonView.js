@@ -25,7 +25,7 @@ export default class CommonView extends Component {
             <Text style={styles.subTitleStyle}>{this.props.subTitle}</Text>
           </View>
           {/*右边*/}
-          <Image source={{uri: this.props.rightIcon}} style={{width: 64, height: 43}}/>
+          <Image source={{uri: this.props.rightIcon}} style={{width: 64, height: 43,resizeMode:'contain'}}/>
         </View>
       </TouchableOpacity>
     );
@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
     width:width*0.5 - 1,
     height:60,
     marginBottom:1,
+    marginRight:1,
 
     // 改变主轴的方向
     flexDirection:'row',

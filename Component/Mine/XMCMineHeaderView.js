@@ -4,7 +4,8 @@ import {
   Text,
   View,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  Platform
 } from 'react-native';
 
 var Dimensions = require('Dimensions');
@@ -71,7 +72,7 @@ export default class MiddleView extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    height:400,
+    height:Platform.OS=='ios'?400:200,
     backgroundColor: '#1fb5ec',
   },
   leftIconStyle: {
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
   },
   topViewStyle: {
     flexDirection: 'row',
-    marginTop: 250,
+    marginTop: Platform.OS=='ios'?280:80,
     //设置侧轴的对其方式
     alignItems: 'center',
     //设置主轴的对其方式

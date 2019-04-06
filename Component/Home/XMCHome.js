@@ -1,23 +1,29 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity ,TextInput, Image, Platform} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity ,TextInput, Image, ScrollView,Platform} from 'react-native';
 /*--导入外部的组件类--*/
 import HomeDetail from "./XMCHomeDetail";
+import TopView from "./XMCTopView"
 
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
-export default class Home extends Component<Props> {
+export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
         {/*首页的导航条*/}
         {this.renderNavBar()}
-        <TouchableOpacity
+        {/*首页的主要内容*/}
+        <ScrollView>
+        {/* 头部的View*/}
+          <TopView/>
+        </ScrollView>
+     {/*   <TouchableOpacity
           onPress={() => {
             this.pushToDetail(); // 点击按钮时关闭当前窗口
           }}
         >
           <Text style={styles.welcome}>首页</Text>
-        </TouchableOpacity>
+        </TouchableOpacity>*/}
       </View>
     );
   }
@@ -37,7 +43,7 @@ export default class Home extends Component<Props> {
         <TouchableOpacity
           onPress={() => this.pushToDetail()}
         >
-          <Text style={{color: 'white'}}>广州</Text>
+          <Text style={{color: 'white'}}>北京</Text>
         </TouchableOpacity>
 
         {/*中间*/}

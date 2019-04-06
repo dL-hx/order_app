@@ -21,8 +21,7 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {};
-export default class XMCBuy extends Component<Props> {
+export default class XMCBuy extends Component {
   render() {
     return (
         <Navigator

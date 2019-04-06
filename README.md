@@ -14,3 +14,6 @@
 ![](https://ws1.sinaimg.cn/large/006pJUwqgy1g1st96gx8nj30f50qvdgl.jpg)
 ## 6.我的页面
 ![](https://ws1.sinaimg.cn/large/006pJUwqly1g1szvfky8ej30f60r2dhd.jpg)
+## 7.设置头部组件的结构, 实现滚屏效果--下一步封装ListView进行替换
+![](https://ws1.sinaimg.cn/large/006pJUwqly1g1t3kaylfag30g20rmq4a.gif)
+

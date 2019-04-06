@@ -25,4 +25,4 @@
 ## 10.首页中间部分2
 ![](https://ws1.sinaimg.cn/large/006pJUwqgy1g1tezx8qylj30cx0n3tau.jpg)
 ## 11.首页购物中心
-![](https://ws1.sinaimg.cn/large/006pJUwqgy1g1tjfxn3gtj30cy0n5dhd.jpg)
+![](https://ws1.sinaimg.cn/large/006pJUwqgy1g1tjhn7vklj30ck0mdn1u.jpg)

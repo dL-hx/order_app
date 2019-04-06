@@ -16,4 +16,6 @@
 ![](https://ws1.sinaimg.cn/large/006pJUwqly1g1szvfky8ej30f60r2dhd.jpg)
 ## 7.设置头部组件的结构, 实现滚屏效果--下一步封装ListView进行替换
 ![](https://ws1.sinaimg.cn/large/006pJUwqly1g1t3kaylfag30g20rmq4a.gif)
+## 8.头部组件轮播图效果
+![](https://ws1.sinaimg.cn/large/006pJUwqgy1g1t9v40fmyg30da0mtdm5.gif)
 

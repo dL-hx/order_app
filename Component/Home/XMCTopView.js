@@ -12,15 +12,19 @@ var Dimensions = require('Dimensions');
 var {width} = Dimensions.get('window');
 
 // // 引入外部的json数据
-// var TopMenu = require('../../LocalData/TopMenu.json');
+var TopMenu = require('../../LocalData/TopMenu.json');
 //
 // // 引入外部的组件
-// var TopListView = require('./XMCTopListView');
+import TopListView from './XMCTopListView'
 
 export default class TopView extends Component {
 
     state = {
         activePage: 0
+    }
+
+    componentDidMount() {
+        // alert(TopMenu.data[0].title);
     }
 
     render() {
@@ -57,16 +61,23 @@ export default class TopView extends Component {
         // 组件数组
         var itemArr = [];
         // 颜色数组 ---> 数据数组
-        var colorArr = ['red','green'];
+        var dataArr = TopMenu.data;
         // 遍历创建组件
-        for(var i=0; i<colorArr.length; i++){
+        for(var i=0; i<dataArr.length; i++){
             itemArr.push(
-              <View key={i} style={{backgroundColor:colorArr[i],width:width,height:120}}>
-                  <Text>{i}</Text>
-              </View>
+              <TopListView key={i} dataArr={dataArr[i]}/>
             );
         }
-        // 返回组件数组
+        // var colorArr = ['red','green'];
+        // // 遍历创建组件
+        // for(var i=0; i<colorArr.length; i++){
+        //     itemArr.push(
+        //       <View key={i} style={{backgroundColor:colorArr[i],width:width,height:120}}>
+        //           <Text>{i}</Text>
+        //       </View>
+        //     );
+        // }
+        //        返回组件数组
         return itemArr;
     }
 

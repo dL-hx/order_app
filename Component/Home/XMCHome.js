@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity ,TextInput, Image, ScrollView,Platform} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, TextInput, Image, ScrollView, Platform, ListView} from 'react-native'
 /*--导入外部的组件类--*/
 import HomeDetail from "./XMCHomeDetail";
 import TopView from "./XMCTopView"

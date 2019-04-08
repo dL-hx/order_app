@@ -6,6 +6,8 @@ import TopView from "./XMCTopView"
 import HomeMiddleView from "./XMCHomeMiddleView"
 import MiddleBottomView from "./XMCMiddleBottomView"
 import ShopCenter from "./XMCShopCenter"
+import ShopCenterDetail from "./XMCShopCenterDetail"
+import GeustYouLike from "./XMCGeustYouLike"
 
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
@@ -18,15 +20,19 @@ export default class Home extends Component {
         {/*首页的主要内容*/}
         <ScrollView>
           {/* 头部的View*/}
-          <TopView/>
+          {/*<TopView/>*/}
           {/*中间的内容*/}
           <HomeMiddleView/>
           {/*中间的下半部分内容*/}
           <MiddleBottomView
-            popTopHome={(data)=>{this.pushToDetail(data)}}
+            // popTopHome={(data)=>{this.pushToDetail(data)}}
           />
           {/*购物中心*/}
-          <ShopCenter/>
+          <ShopCenter
+            popToHomeView={(data)=>{this.pushToShopCenterDetail(data)}}
+          />
+          {/*猜你喜欢*/}
+          <GeustYouLike />
         </ScrollView>
      {/*   <TouchableOpacity
           onPress={() => {
@@ -39,20 +45,20 @@ export default class Home extends Component {
     );
   }
 
-  // 跳转到二级界面
-  pushToDetail() {
-    this.props.navigator.push({
-      component: HomeDetail, // 要跳转的板块
-      title: '详情页'
-    });
-  }
+  // // 跳转到二级界面
+  // pushToDetail() {
+  //   this.props.navigator.push({
+  //     component: HomeDetail, // 要跳转的板块
+  //     title: '详情页'
+  //   });
+  // }
 
   renderNavBar() {
     return (
       <View style={styles.navBarStyle}>
         {/*左边*/}
         <TouchableOpacity
-          onPress={() => this.pushToDetail()}
+          // onPress={() => this.pushToDetail()}
         >
           <Text style={{color: 'white'}}>北京</Text>
         </TouchableOpacity>
@@ -85,12 +91,26 @@ export default class Home extends Component {
       </View>
     );
   }
+
+  // 跳转到购物中心详情页
+  pushToShopCenterDetail(url) {
+    this.props.navigator.push(
+      {
+        component: ShopCenterDetail, // 要跳转的版块
+        passProps: {'url': this.dealWithUrl(url)}
+      }
+    );
+  }
+  // 处理URL
+  dealWithUrl(url){
+    return url.replace('imeituan://www.meituan.com/web/?url=', '');
+  }
 }
 
 const styles = StyleSheet.create({
   navBarStyle: {// 导航条样式
     height: Platform.OS==='ios'?64:44,
-    backgroundColor: 'rgba(255,96,0,1.0)',
+    backgroundColor: '#00A7FF',
     //设置主轴的方向
     flexDirection: 'row',
     // 垂直居中---设置侧轴的对齐方式

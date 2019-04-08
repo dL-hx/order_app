@@ -20,7 +20,7 @@ var cellH = 70;
 var vMargin = (width - cellW * cols) / (cols + 1);
 
 // 忽略RN中的黄色警告----刷新之后，你的世界就清净了
-// console.disableYellowBox = true;
+console.disableYellowBox = true;
 export default class TopListView extends Component {
 
     static defaultProps() {
@@ -56,7 +56,7 @@ export default class TopListView extends Component {
         return(
           <TouchableOpacity>
               <View style={styles.cellStyle}>
-                  <Image source={{uri:rowData.image}} style={{width:52, height:52}}/>
+                  <Image source={{uri:rowData.imageUrl}} style={{width:52, height:52}}/>
                   <Text style={styles.titleStyle}>{rowData.title}</Text>
               </View>
           </TouchableOpacity>

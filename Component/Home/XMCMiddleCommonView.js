@@ -20,7 +20,9 @@ export default class CommonView extends Component {
 
   render() {
     return (
-      <TouchableOpacity onPressIn={()=>this.clickCell(this.props.tplurl)}>
+      <TouchableOpacity
+        // onPressIn={()=>this.clickCell(this.props.tplurl)}
+      >
         <View style={styles.container}>
           {/*左边*/}
           <View>

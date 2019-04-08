@@ -17,13 +17,7 @@ var Home_D5 = require('../../LocalData/XMG_Home_D5.json');
 export default class ShopCenter extends Component {
   static defaultProps() {
     return {
-      title:'',
-      subTitle: '',
-      rightIcon: '',
-      titleColor: '',
-      tplurl: '', //下级界面的URL路径
-      // 回调函数
-      callBackClickCell: null
+      popToHomeView:null
     }
   };
 

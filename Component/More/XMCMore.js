@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   },
   navOutViewStyle: {
     height: Platform.OS === 'ios' ? 64 : 44,
-    backgroundColor: 'rgba(255,96,0,1.0)',
+    backgroundColor: '#00A7FF',
     //设置主轴的方向
     flexDirection: 'row',
     // 垂直居中---设置侧轴的对齐方式

@@ -31,7 +31,7 @@ export default class BottomCommonCell extends Component {
           {/*右边*/}
           <View style={styles.rightViewStyle}>
             <Text style={{color:'gray'}}>{this.props.rightTitle}</Text>
-            <Image source={require('./../../image/arrow.png')} style={{width:8, height:13, marginRight:8, marginLeft:5}}/>
+            <Image source={require('./../../image/arrow.png')} style={{width:22, height:22, marginRight:8, marginLeft:5}}/>
           </View>
         </View>
       </TouchableOpacity>

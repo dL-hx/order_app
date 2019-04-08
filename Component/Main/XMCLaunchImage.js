@@ -3,7 +3,7 @@ import { StyleSheet, Text, View,Image} from 'react-native';
 /*--导入外部组件--*/
 import Main from "./XMCMain";
 
-export default class LaunchImage extends Component<Props> {
+export default class LaunchImage extends Component {
   render() {
     return (
       <Image source={require('./../../image/launchimage.png')} style={styles.LaunchImageStyle}/>

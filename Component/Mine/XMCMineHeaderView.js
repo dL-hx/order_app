@@ -29,9 +29,7 @@ export default class MiddleView extends Component {
       <View style={styles.topViewStyle}>
         <Image source={require('./../../image/avator.png')} style={styles.leftIconStyle}/>
         <View style={styles.centerViewStyle}>
-          <TouchableOpacity onPress={()=>{alert('1')}}>
-            <Text style={{fontSize:18,color:'white',fontWeight:'bold'}}>快乐的小天使</Text>
-          </TouchableOpacity>
+          <Text style={{fontSize:18,color:'white',fontWeight:'bold'}}>快乐的小天使</Text>
           {/*--右边的vip logo--*/}
           <Image source={require('./../../image/vip.png')} style={{width:22,height:22,marginRight:8}} />
         </View>

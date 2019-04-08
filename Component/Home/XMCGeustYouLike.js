@@ -8,9 +8,6 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-var Dimensions = require('Dimensions');
-var {width, height} = Dimensions.get('window');
-
 // 导入外部的组件
 import CommonCell from './XMCBottomCommonCell'
 
@@ -127,7 +124,7 @@ const styles = StyleSheet.create({
 
   rightViewStyle:{
     marginLeft:8,
-    width:width*0.7,
+    width:220,
     justifyContent:'center'
   },
 

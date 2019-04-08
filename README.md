@@ -28,4 +28,4 @@
 ![](https://ws1.sinaimg.cn/large/006pJUwqgy1g1tjhn7vklj30ck0mdn1u.jpg)
 ## 12. 首页猜你喜欢+商家页面
 ![](https://ws1.sinaimg.cn/large/006pJUwqly1g1uy12g89sg30da0nh7wh.gif)
-至此,就完成了仿美团的一个app
+<p>至此,就完成了仿美团的一个app</p>

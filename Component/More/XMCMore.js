@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, Platform} from 'react-native'
 import CommonCell from "./XMCCommonCell"
+import LoginDetail from "./XMCLoginDetail"
 
 /*--引入外部组件--*/
 
@@ -39,10 +40,21 @@ export default class More extends Component {
       <Text style={{color: 'white', fontSize: 20,  }}>更多</Text>
       <TouchableOpacity
        activeOpacity={0.5}
-       style={styles.rightViewStyle}>
+       style={styles.rightViewStyle}
+       onPress={()=>{this.pushToLoginView()}}
+      >
         <Image source={require('./../../image/setting.png')} style={styles.navImgStyle}></Image>
       </TouchableOpacity>
     </View>
+  }
+
+  pushToLoginView() {
+    // 跳转登录页面
+    this.props.navigator.push(
+      {
+        component: LoginDetail, // 要跳转的版块
+      }
+    );
   }
 }
 
